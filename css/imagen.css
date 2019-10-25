@@ -1,0 +1,20 @@
+/*
+    Tarea 4. Crear un fondo con una imagen 
+*/
+
+/*
+    a = 0, b = 0, c = 1 Especificidad: 1
+*/
+
+body, html{
+    height: 1000px;
+    width: 1000px;
+}
+
+body {
+    background-color: gray;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

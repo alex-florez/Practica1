@@ -1,0 +1,243 @@
+/*
+    Tarea 1. Encabezados h1...h6
+*/
+
+/******** TEXTO ********/
+/*  
+    a = 0, b = 0, c = 6  -> Especificidad: 6
+*/
+h1,h2,h3,h4,h5,h6{
+    font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size-adjust: 0.5;
+}
+
+/*
+    a = 0, b = 0, c = 3 -> Especificidad: 3
+*/
+h1, h3, h5{
+    font-stretch: expanded;
+}
+
+/*
+    a = 0, b = 0, c = 3 -> Especificidad: 3
+*/
+h2, h4, h6{
+    font-style: italic;
+}
+
+/* 
+    a = 0, b = 0, c = 1 -> Especificidad: 1    
+*/
+h1{
+    font-size: 2em;
+}
+
+/* 
+    a = 0, b = 0, c = 1 -> Especificidad: 1
+*/
+h2{
+    font-size: 1.5em
+}
+
+/* 
+    a = 0, b = 0, c = 1 -> Especificidad: 1
+*/
+h3{
+    font-size: 1.2em;
+}
+
+/* 
+    a = 0, b = 0, c = 1 -> Especificidad: 1
+*/
+h4{
+    font-size: 1em;
+}
+
+/* 
+    a = 0, b = 0, c = 1 -> Especificidad: 1
+*/
+h5{
+    font-size: 0.9em;
+}
+
+/* 
+    a = 0, b = 0, c = 1 -> Especificidad: 1
+*/
+h6{
+    font-size: 0.6em;
+}
+/***********************************************************/
+
+
+/* ------- ESTRUCTURA GENERAL DE LA PÁGINA -------*/
+
+header{
+    grid-area: header;
+}
+
+aside{
+    grid-area: aside;
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    grid-area: content;
+    margin-left: 20x;
+
+}
+
+
+aside{
+    border: solid;
+    margin-right: 20px;
+}
+
+
+aside h2{
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+main header{
+    width: 100%;
+}
+
+main section{
+
+    width: 100%;
+}
+
+footer {
+    grid-area:footer;
+    background-color: #EAFA70;
+}
+
+section {
+    background-color: #EAFA70;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 2px;
+}
+
+aside ul{
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+
+aside li {
+    list-style-type: none;
+    padding: 8px 16px 8px 16px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+
+}
+
+aside a{
+    padding: 10px;
+    background-color: #EAFA70;
+    border-radius:25%;
+}
+
+
+/*
+    Tarea 2. Definición básica del texto
+*/
+
+
+/* a = 0, b = 0, c = 4 Especificidad: 4*/
+p, li, th, td {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14pt;
+}
+
+/* a = 0, b = 0, c = 2 Especificidad: 2*/
+p::first-letter { 
+    font-size: 2em;
+}
+
+/*
+    a = 0, b = 0, c = 1 -> Especificidad = 1
+*/
+body{
+    display: grid;
+    grid-template-columns: 1fr, 3fr;
+    grid-template-areas: 
+        "header header"
+        "aside content"
+        "footer footer";
+
+    background-color: #7CC2FF;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+
+h1 {
+    color: yellow;
+    background-color: #4AA1E8;
+    letter-spacing: 2em;
+    font-style: italic;
+    font-stretch: expanded;
+
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/*
+    a = 0, b = 0, c = 6 Especificidad: 6
+*/
+h2, h3, h4, h5, h6 {
+    color:  yellow  ;
+    background-color: #4AA1E8;
+    padding: 5px 8px;
+    margin: 5px 30% 0px 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+
+p {
+    color: black;
+    background-color: #EAFA70;
+    text-align: justify;
+    padding: 0px 30% 0px 0px;
+}
+
+
+
+
+/*
+    a = 0, b = 0, c = 1 Especificidad: 1
+*/
+th {
+    color: black;
+    background-color: #73B6FF
+}
+
+
+/*
+    a = 0, b = 0, c = 1 Especificidad: 1
+*/
+tr{
+    color: black;
+    background-color: #A5F05A;
+}
+
+
+
+
+
+
